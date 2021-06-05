@@ -1,8 +1,16 @@
 import './App.css';
-import Home from "./views/Home.jsx"
+import Beau from "./views/Beau.jsx"
+import Data from "./views/Data.jsx"
+import Func from "./views/Func.jsx"
+import Even from "./views/Even.jsx"
 function App() {
   return (
-    <Home></Home>
+    <div id="App">
+      <Beau></Beau>
+      <Data></Data>
+      <Func></Func>
+      <Even></Even>
+    </div>
   )
 }
 
