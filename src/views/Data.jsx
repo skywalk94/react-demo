@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Data extends Component {
     constructor() {
         super()
@@ -19,6 +19,7 @@ class Data extends Component {
             user: {
                 name: "明知山"
             },
+            isFlag: true
         }
     }
 
@@ -30,12 +31,29 @@ class Data extends Component {
                 遍历数组
                 <ul>
                     {this.state.list.map((item, index) => {
-                        return <li key={index}>
-                            {item.name}{item.age}
-                        </li>
+                        return (
+                            <li key={index}>
+                                动态路由参数传值
+                                <Link to={`/data_detail/${item.name}`}>{index + 1}、{item.name}{item.age}</Link>
+                            </li>
+                        )
                     })
                     }
                 </ul>
+                <ul>
+                    {this.state.list.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                get参数传值
+                                <Link to={`/data_detail1?name=${item.name}`}>{index + 1}、{item.name}{item.age}</Link>
+                            </li>
+                        )
+                    })
+                    }
+                </ul>
+                {this.state.isFlag &&
+                    <p>js控制显示的内容</p>
+                }
             </div>
         )
     }
