@@ -54,6 +54,7 @@ class Data extends Component {
                 {this.state.isFlag &&
                     <p>js控制显示的内容</p>
                 }
+                <p className="color">引入外部css样式</p>
             </div>
         )
     }

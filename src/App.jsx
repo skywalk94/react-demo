@@ -1,5 +1,5 @@
 import './App.css';
-import Beau from "./views/Beau.jsx"
+import Beau from "./views/Beau/Beau.jsx"
 import Data from "./views/Data.jsx"
 import Func from "./views/Func.jsx"
 import Form from "./views/Form.jsx"
