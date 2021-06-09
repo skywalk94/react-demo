@@ -6,7 +6,6 @@ class Func extends Component {
         this.state = {
             msg: "我是Msg"
         }
-
         // 第二种
         this.getData2 = this.getData2.bind(this)
     }
@@ -21,17 +20,26 @@ class Func extends Component {
     getData3 = () => {
         alert(this.state.msg)
     }
-
+    getData5() {
+        alert(this.state.msg)
+    }
     setData1 = () => {
         // this.setState({
         //     msg: "改变后的值"
         // })
-        this.setState({
-            msg: "改变后的值"
-        }, () => {
-            //改变完之后再执行的
-            alert(this.state.msg)
+
+        this.setState((state) => {
+            return {
+                msg: state.msg = "改变123"
+            }
         })
+
+        // this.setState({
+        //     msg: "改变后的值"
+        // }, () => {
+        //     //改变完之后再执行的
+        //     alert(this.state.msg)
+        // })
     }
 
     setData2 = (str) => {
@@ -49,6 +57,10 @@ class Func extends Component {
                 <button onClick={this.getData2}>第二种获取动态值</button>
                 <br />
                 <button onClick={this.getData3}>第三种获取动态值</button>
+                <br />
+                <button onClick={() => alert(this.state.msg)}>第四种获取动态值</button>
+                <br />
+                <button onClick={() => this.getData5()}>第五种获取动态值</button>
                 <br />
                 <button onClick={this.setData1}>改变data里的值</button>
                 <br />

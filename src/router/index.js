@@ -1,39 +1,33 @@
-import Beau from "../views/Beau/Beau.jsx"
-import Data from "../views/Data.jsx"
-import Func from "../views/Func.jsx"
-import Form from "../views/Form.jsx"
-import Data_detail from "../views/Data_detail.jsx"
-import Data_detail1 from "../views/Data_detail1.jsx"
-import Comp from "../views/Comp.jsx"
-import Antd from "../views/Antd.jsx"
+import React, { lazy } from 'react';
+// 基于路由进行代码分割     
+// 经测试可进行路由懒加载
+// https://zh-hans.reactjs.org/docs/code-splitting.html#route-based-code-splitting
 
 const routes = [
     {
         path: "/",
-        component: Beau
-    },
-    {
+        component: lazy(() => import('@/views/Beau/Beau.jsx'))
+    }, {
         path: "/data",
-        component: Data
+        component: lazy(() => import('@/views/Data.jsx'))
     }, {
         path: "/func",
-        component: Func
+        component: lazy(() => import('@/views/Func.jsx'))
     }, {
         path: "/form",
-        component: Form
+        component: lazy(() => import('@/views/Form.jsx'))
     }, {
-        path: "/data_detail",
-        component: Data_detail
+        path: "/data_detail/:name",
+        component: lazy(() => import('@/views/Data_detail.jsx'))
     }, {
         path: "/data_detail1",
-        component: Data_detail1
+        component: lazy(() => import('@/views/Data_detail1.jsx'))
     }, {
         path: "/comp",
-        component: Comp
+        component: lazy(() => import('@/views/Comp.jsx'))
     }, {
         path: "/antd",
-        component: Antd
+        component: lazy(() => import('@/views/Antd.jsx'))
     },
 ]
-
 export default routes
