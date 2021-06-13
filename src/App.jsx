@@ -1,5 +1,5 @@
 import './App.less';
-import routes from "./router"
+import router from "./router"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import React, { Suspense } from 'react';
 function App() {
@@ -12,12 +12,17 @@ function App() {
         <Link to="/form">--表单提交</Link>
         <Link to="/comp">--父子组件</Link>
         <Link to="/antd">--antd组件</Link>
+        <Link to="/life">--生命周期</Link>
+        <Link to="/user">--嵌套路由</Link>
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             {
-              routes.map((item) => {
+              router.map((item) => {
                 return (
-                  <Route exact path={item.path} key={item.path} component={item.component} />
+                  <Route exact={item.exact} path={item.path} key={item.path}
+                    render={props => (
+                      <item.component {...props} routes={item.children} />
+                    )} />
                 )
               })
             }

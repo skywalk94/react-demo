@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 class Head extends Component {
     constructor(props) {
         super(props);
         this.state = {
             msg: "我是子组件"
         };
+    }
+    // 可监听父组件传值的变化
+    // 将废弃
+    componentWillReceiveProps() {
+
     }
     componentDidMount() {
         // 通过this.props接受父组件的值和方法
@@ -21,5 +27,15 @@ class Head extends Component {
         );
     }
 }
+// 如果父组件没有传入title值，赋默认值
+Head.defaultProps = {
+    title: "标题"
+}
 
+// 通过PropTypes来验证传入的title为string类型
+Head.propTypes = {
+    title: PropTypes.string
+};
+// 文档说明
+// https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html#gatsby-focus-wrapper
 export default Head;

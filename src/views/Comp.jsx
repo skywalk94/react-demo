@@ -13,7 +13,7 @@ class Comp extends Component {
     }
 
     childVal = (value) => {
-        // 获取子组件
+        // 获取子组件传递值
         this.setState({
             value: value
         })

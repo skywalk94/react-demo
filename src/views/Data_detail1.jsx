@@ -7,13 +7,14 @@ class Data_detail1 extends Component {
     }
     componentDidMount() {
         // 可安装 'url' 进行参数解析
-        console.log(this.props.location.search)
+        console.log(this.props.history)
+        console.log(this.props.history.location.search)
         this.getApi()
     }
 
     getApi = () => {
         axiosApi("getClassSchedule", {}, "post").then(res => {
-            console.log(this)
+            // console.log(this)
         })
     }
 
