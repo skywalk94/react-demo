@@ -26,17 +26,13 @@ class Data extends Component {
         }
     }
     goPath = () => {
-        console.log(this.props.history)
         this.props.history.push({
-            pathname: "/data_detail1", search: `?name=张三`
+            pathname: "/data_detail_t", search: `?name=张三&id=123`
         })
-
-        // 用search,地址栏会拼接参数
-        // 用state，地址栏不会拼接参数，进行了加密
 
         // 不留栈跳转
         // this.props.history.replace({
-        //     pathname: "/data_detail1", state: `?name=张三`
+        //     pathname: "/data_detail_t", search: `?name=张三&id=123`
         // })
     }
     render() {
@@ -50,7 +46,7 @@ class Data extends Component {
                         return (
                             <li key={index}>
                                 动态路由参数传值
-                                <Link to={`/ data_detail / ${item.name}`}>{index + 1}、{item.name}{item.age}</Link>
+                                <Link to={`/data_detail/${item.name}`}>{index + 1}、{item.name}{item.age}</Link>
                                 <ul>
                                     {item.child.map((row, idx) => {
                                         return <li style={{ 'color': 'red' }} key={idx}>{row}</li>
@@ -67,7 +63,7 @@ class Data extends Component {
                         return (
                             <li key={index}>
                                 get参数传值
-                                <Link to={`/ data_detail1 ? name = ${item.name}`}>{index + 1}、{item.name}{item.age}</Link>
+                                <Link to={`/data_detail_t?name=${item.name}`}>{index + 1}、{item.name}{item.age}</Link>
                             </li>
                         )
                     })

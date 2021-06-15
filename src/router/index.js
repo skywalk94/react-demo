@@ -24,8 +24,8 @@ const router = [
         component: lazy(() => import('@/views/Data_detail.jsx')),
         exact: true
     }, {
-        path: "/data_detail1",
-        component: lazy(() => import('@/views/Data_detail1.jsx')),
+        path: "/data_detail_t",
+        component: lazy(() => import('@/views/Data_detail_t.jsx')),
         exact: true
     }, {
         path: "/comp",
