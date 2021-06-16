@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Head from "../components/Head"
+import Son from "../components/Son"
 
-class Comp extends Component {
+class Father extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,10 +28,10 @@ class Comp extends Component {
         return (
             <div>
                 {/*  parent={this}可将整个父组件的值和方法传递给子组件 */}
-                <Head title="明知山" func={this.run} parent={this} getChild={this.getChild}></Head>
+                <Son title="明知山" func={this.run} parent={this} getChild={this.getChild}></Son>
                 {this.state.value}
             </div>
         );
     }
 }
-export default Comp;
+export default Father;

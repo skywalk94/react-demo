@@ -28,8 +28,8 @@ const router = [
         component: lazy(() => import('@/views/Data_detail_t.jsx')),
         exact: true
     }, {
-        path: "/comp",
-        component: lazy(() => import('@/views/Comp.jsx')),
+        path: "/father",
+        component: lazy(() => import('@/views/Father.jsx')),
         exact: true
     }, {
         path: "/antd",

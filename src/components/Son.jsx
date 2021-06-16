@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-class Head extends Component {
+class Son extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,14 +28,14 @@ class Head extends Component {
     }
 }
 // 如果父组件没有传入title值，赋默认值
-Head.defaultProps = {
+Son.defaultProps = {
     title: "标题"
 }
 
 // 通过PropTypes来验证传入的title为string类型
-Head.propTypes = {
+Son.propTypes = {
     title: PropTypes.string
 };
 // 文档说明
 // https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html#gatsby-focus-wrapper
-export default Head;
+export default Son;
