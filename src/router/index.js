@@ -58,6 +58,10 @@ const router = [
         path: "/hook",
         component: lazy(() => import('@/views/Hook.jsx')),
         exact: true
+    }, {
+        path: "/redux",
+        component: lazy(() => import('@/views/Redux.jsx')),
+        exact: true
     }
 ]
 export default router

@@ -15,6 +15,7 @@ function App() {
         <Link to="/life">--生命周期</Link>
         <Link to="/user">--嵌套路由</Link>
         <Link to="/hook">--React Hook函数式编程</Link>
+        <Link to="/redux">--redux使用</Link>
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             {
