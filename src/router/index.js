@@ -54,6 +54,10 @@ const router = [
                 exact: true,
             }
         ]
-    },
+    }, {
+        path: "/hook",
+        component: lazy(() => import('@/views/Hook.jsx')),
+        exact: true
+    }
 ]
 export default router
