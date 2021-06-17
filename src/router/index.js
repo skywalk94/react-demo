@@ -62,6 +62,10 @@ const router = [
         path: "/redux",
         component: lazy(() => import('@/views/Redux.jsx')),
         exact: true
+    }, {
+        path: "/portals",
+        component: lazy(() => import('@/views/Portals.jsx')),
+        exact: true
     }
 ]
 export default router

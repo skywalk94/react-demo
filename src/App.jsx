@@ -16,6 +16,7 @@ function App() {
         <Link to="/user">--嵌套路由</Link>
         <Link to="/hook">--React Hook函数式编程</Link>
         <Link to="/redux">--redux使用</Link>
+        <Link to="/portals">--Portals传送门</Link>
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             {
