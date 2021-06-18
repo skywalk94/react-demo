@@ -1,6 +1,1 @@
-## Vue前端扩展React技术栈入门项目 
-项目运行
-```js
-yarn install
-yarn start
-```
+### 初始化项目，删除eslint，无用文件
