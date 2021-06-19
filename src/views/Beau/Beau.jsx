@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from "../../assets/img/react.png"
+import logo from "@/assets/img/react.png"
 
 import "./style.less"
 class Beau extends Component {
@@ -23,9 +23,11 @@ class Beau extends Component {
                 <img src={logo} alt="" />
                 <br />
                 第二种引入本地图片
-                <img src={require("../../assets/img/react.png").default} alt="" />
+                <img src={require("@/assets/img/react.png").default} alt="" />
                 <p className="color">引入外部css样式</p>
                 <p style={font}>引入内部css样式</p>
+                引入svg格式图片
+                <img src={require("@/assets/svg/avatar.svg").default}></img>
             </div>
         )
     }
