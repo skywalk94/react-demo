@@ -1,6 +1,19 @@
 const path = require("path");
 const CracoLessPlugin = require("craco-less");
 module.exports = {
+    // antd按需加载
+    babel: {
+        plugins: [
+            [
+                "import",
+                {
+                    "libraryName": "antd",
+                    "libraryDirectory": "es",
+                    "style": true// true 针对less
+                }
+            ]
+        ]
+    },
     //antd插件配置，使用less并定义主题
     plugins: [
         {
@@ -8,7 +21,7 @@ module.exports = {
             options: {
                 lessLoaderOptions: {
                     lessOptions: {
-                        modifyVars: { '@primary-color': '#1DA57A' },
+                        modifyVars: { '@primary-color': '#1DA57A' }, //主题色
                         javascriptEnabled: true,
                     },
                 },
