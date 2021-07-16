@@ -7,6 +7,7 @@ class Redux extends Component {
     }
 
     componentDidMount() {
+        // 获取redux的所有的变量进行赋值
         let value = store.getState()
         this.setState(value)
         // 注册监听store，store变化后调用组件的changeStore方法更新组件的state
