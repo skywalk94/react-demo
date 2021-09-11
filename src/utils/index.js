@@ -1,4 +1,5 @@
-export default function parseUrl(param) {
+// 解析路由参数
+export function parseUrl(param) {
     if (param.indexOf("?") == 0) {
         let temp = {}
         let arr = param.substr(1).split("&")

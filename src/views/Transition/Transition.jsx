@@ -11,6 +11,9 @@ const Transition = () => {
             <CSSTransition
                 in={show}
                 classNames="fade"
+                timeout={300}
+                unmountOnExit={true}
+                appear
                 onEnter={el => console.log('开始进入', el)}
                 onEntering={el => console.log('正在进入')}
                 onEntered={el => console.log('进入完成')}

@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
-const Hook = (props) => {
+import React, { useState, useEffect, useContext } from 'react';
+import Context from "@/components/Context.jsx"
+import CountContext from '@/context/CountContext';
+const Hook = () => {
     const [count, setCount] = useState(0); // 0为count初始值
     const [arr, setArr] = useState([])
     let list = [1, 2, 3]
@@ -50,6 +52,9 @@ const Hook = (props) => {
                     })
                 }
             </ul>
+            <CountContext.Provider value={count}>
+                <Context />
+            </CountContext.Provider>
         </div>
     );
 }

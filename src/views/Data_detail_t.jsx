@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axiosApi from "@/axios";
-import parseUrl from "@/common/parseUrl"
+import { parseUrl } from "@/utils"
 class Data_detail1 extends Component {
     constructor(props) {
         super(props);
