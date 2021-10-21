@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import Context from "@/components/Context.jsx"
-import CountContext from '@/context/CountContext';
-const Hook = () => {
+import React, { useState, useEffect } from 'react';
+export default () => {
     const [count, setCount] = useState(0); // 0为count初始值
     const [arr, setArr] = useState([])
     let list = [1, 2, 3]
@@ -9,7 +7,6 @@ const Hook = () => {
     useEffect(() => {
         console.log("组件加载或数据更新就会执行")
         // console.log(this) undefined 在hook中没有this指向
-
         setArr(['a', 'b', 'c'])
         let timer = setInterval(() => {
             // console.log("1")
@@ -52,11 +49,6 @@ const Hook = () => {
                     })
                 }
             </ul>
-            <CountContext.Provider value={count}>
-                <Context />
-            </CountContext.Provider>
         </div>
     );
 }
-
-export default Hook;

@@ -3,12 +3,16 @@ import logo from "@/assets/img/react.png"
 
 import "./style.less"
 class Beau extends Component {
-    constructor(props) {
-        super(props)
-        // 定义全局数据
-        this.state = {
-            isFlag: true
-        }
+    // constructor(props) {
+    //     super(props)
+    //     // 定义全局数据
+    //     this.state = {
+    //         isFlag: true
+    //     }
+    // }
+    // 简化使用
+    state = {
+        isFlag: true
     }
     render() {
         let font = {

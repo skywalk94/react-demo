@@ -70,6 +70,10 @@ const router = [
         path: "/transition",
         component: lazy(() => import('@/views/Transition/Transition.jsx')),
         exact: true
+    }, {
+        path: "/context",
+        component: lazy(() => import('@/views/Context.jsx')),
+        exact: true
     }
 ]
 export default router

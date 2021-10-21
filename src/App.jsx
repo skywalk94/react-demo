@@ -18,6 +18,7 @@ function App() {
         <Link to="/redux">--redux使用</Link>
         <Link to="/portals">--Portals传送门</Link>
         <Link to="/transition">--过渡动画</Link>
+        <Link to="/context">--context使用</Link>
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             {
