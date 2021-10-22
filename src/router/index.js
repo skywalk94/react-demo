@@ -74,6 +74,10 @@ const router = [
         path: "/context",
         component: lazy(() => import('@/views/Context.jsx')),
         exact: true
+    }, {
+        path: "/hoc",
+        component: lazy(() => import('@/views/Hoc.jsx')),
+        exact: true
     }
 ]
 export default router
