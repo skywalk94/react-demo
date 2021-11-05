@@ -25,6 +25,19 @@ module.exports = {
                         javascriptEnabled: true,
                     },
                 },
+                // 配置module.less
+                modifyLessRule(lessRule, context) {
+                    lessRule.exclude = /\.m\.less$/
+                    return lessRule
+                },
+                modifyLessModuleRule(lessModuleRule, context) {
+                    lessModuleRule.test = /\.m\.less$/
+                    const cssLoader = lessModuleRule.use.find(loaderByName('css-loader'))
+                    cssLoader.options.modules = {
+                        localIdentName: '[local]_[hash:base64:5]'
+                    }
+                    return lessModuleRule
+                }
             },
         },
     ],

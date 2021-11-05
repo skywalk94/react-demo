@@ -29,6 +29,7 @@ class Func extends Component {
         // })
 
         this.setState((state) => {
+            //state会拿最新的值
             return {
                 msg: state.msg = "改变123"
             }
