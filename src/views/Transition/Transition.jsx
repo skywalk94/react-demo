@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group'
 import style from "./style.module.less"
+import "./fade.less"
 const Transition = () => {
     const [show, setShow] = useState(true)
     return (
@@ -9,7 +10,7 @@ const Transition = () => {
                 当前状态：{show ? '显示' : '隐藏'}</button>
             <CSSTransition
                 in={show}
-                classNames={style.fade}
+                classNames="fade"
                 timeout={300}
                 unmountOnExit={true}
                 appear
