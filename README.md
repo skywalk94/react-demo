@@ -10,3 +10,5 @@ dev为移动端demo，有移动端的适配rem，antd-mobile
 
 temp为开箱包
 
+vite为项目构建用vite
+
