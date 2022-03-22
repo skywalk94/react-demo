@@ -1,10 +1,6 @@
-const defaultState = {
-    countNum: 0
-}
-
-export default (state = defaultState, action) => {
+export default (state = { num: 0 }, action) => {
     if (action.type == "add") {
-        return { countNum: action.value }
+        return { num: action.value }
     }
     return state;
 }

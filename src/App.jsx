@@ -1,7 +1,7 @@
-import './App.less';
+import './App.less'
 import router from "./router"
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
+import React, { Suspense } from 'react'
 function App() {
   return (
     <Router>
@@ -39,4 +39,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
