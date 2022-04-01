@@ -1,8 +1,7 @@
-import { lazy } from 'react'
-const Index = lazy(() => import('@/pages/Index.jsx'))
-const Home = lazy(() => import('@/pages/Home.jsx'))
-const HomeLeft = lazy(() => import('@/pages/Home/Home-left.jsx'))
-const HomeRight = lazy(() => import('@/pages/Home/Home-right.jsx'))
+import Index from '@/pages/Index.jsx'
+import Home from '@/pages/Home/Home.jsx'
+import HomeLeft from '@/pages/Home/Home-left.jsx'
+import HomeRight from '@/pages/Home/Home-right.jsx'
 
 export default [
     {
